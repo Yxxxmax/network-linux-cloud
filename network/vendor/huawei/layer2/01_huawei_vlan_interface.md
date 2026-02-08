@@ -15,3 +15,16 @@
   - **tagged**：数据帧携带 802.1Q 标签，用于在 Trunk 链路上区分不同 VLAN。
   - **untagged**：数据帧不携带 802.1Q 标签，通常用于终端设备接入。
 - **PVID（Port Default VLAN ID）**：接口的默认 VLAN ID，用于处理接收到的无标签帧，为其打上对应 VLAN 标签。
+
+### 3. 华为 VLAN 配置命令
+```bash
+# 批量创建 VLAN
+vlan batch 10 20 30
+
+# 进入 VLAN 视图，配置 VLAN 名称
+vlan 10
+ name Office
+vlan 20
+ name Server
+vlan 30
+ name IOT
